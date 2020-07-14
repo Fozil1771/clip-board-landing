@@ -1,0 +1,83 @@
+.snippet {
+    @include flexBox(column);
+    margin-top: 8rem;
+
+    &--title {
+        font-size: 3rem;
+        font-weight: 400;
+        margin: 2rem;
+        color: hsl(210, 10%, 33%);
+        
+        @media screen and (max-width: 375px) {
+            &{
+                font-size: 2rem;
+                text-align: center;
+            }
+         }
+    }
+    &--text {
+        text-align: center;
+        line-height: 3rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        width: 50%;
+        color: hsl(201, 11%, 66%);
+        margin-bottom: 5rem;
+
+        @media screen and (max-width: 375px) {
+            &{
+                @include text(fit-content)
+            }
+         }
+    }
+
+    &__content {
+        // width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 12rem;
+        @media screen and (max-width: 375px) {
+            &{
+                @include flexBox(column);
+            }
+         }
+
+        &-img img{
+            height: 100%;
+            width: 100%;
+        }
+
+        &-info {
+            @media screen and (max-width: 375px) {
+                &{
+                    @include flexBox(column);
+                }
+             }
+            .info-title {
+                text-align: start;       
+                font-size: 2rem;
+                font-weight: 400;
+                margin: 3rem 0 1rem 0;
+                color: hsl(210, 10%, 33%);
+                @media screen and (max-width: 375px) {
+                    &{
+                        text-align: center;
+                    }
+                 }
+            }
+            .info-text {
+                text-align: start;
+                line-height: 2rem;
+                font-size: 1.5rem;
+                font-weight: 400;
+                width: 60%;
+                color: hsl(201, 11%, 66%);
+                @media screen and (max-width: 375px) {
+                    &{
+                        text-align: center;
+                    }
+                 }
+            }
+        }
+    }
+}

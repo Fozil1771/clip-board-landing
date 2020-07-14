@@ -1,0 +1,48 @@
+.devices {
+    @include flexBox(column);
+    margin-top: 6rem;
+    margin-bottom: 10rem;
+
+    &--title {
+        font-size: 4rem;
+        font-weight: 600;
+        margin: 2rem;
+        color: hsl(210, 10%, 33%);
+
+        @media screen and (max-width: 375px) {
+            &{
+                font-size: 2rem;
+                text-align: center;
+            }
+         }
+    }
+    &--text {
+        text-align: center;
+        line-height: 3rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        width: 45%;
+        color: hsl(201, 11%, 66%);
+        margin-bottom: 6rem;
+
+        @media (max-width: 375px) {
+            &{
+                @include text(fit-content)
+            }
+         }
+    }
+
+    &--btns {
+        @media screen and (max-width: 375px) {
+            &{
+                @include flexBox(column);
+
+                .btn {
+                    font-size: 1rem;
+                    padding: 1rem;
+                    margin: .5rem;
+                }
+            }
+         }
+    }
+}

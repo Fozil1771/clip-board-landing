@@ -1,0 +1,14 @@
+@mixin flexBox($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text($size) {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem;
+    line-height: 2rem;
+    width: $size;
+}

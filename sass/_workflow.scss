@@ -1,0 +1,109 @@
+.workflow {
+    @include flexBox(column);
+    margin-top: 6rem;
+
+    &--title {
+        font-size: 3rem;
+        font-weight: 400;
+        margin: 2rem;
+        color: hsl(210, 10%, 33%);
+        
+        @media screen and (max-width: 375px) {
+            &{
+                font-size: 2rem;
+                text-align: center;
+            }
+         }
+    }
+    &--text {
+        text-align: center;
+        line-height: 3rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        width: 45%;
+        color: hsl(201, 11%, 66%);
+        margin-bottom: 6rem;
+
+        @media screen and (max-width: 375px) {
+            &{
+                @include text(fit-content)
+            }
+         }
+    }
+
+    &--items {
+        display: flex;
+        flex-direction: row;
+        margin: 2rem;
+        width: 80%;
+
+        @media screen and (max-width: 375px) {
+            &{
+                @include flexBox(column);
+
+            }
+         }
+
+        &-card {
+            @include flexBox(column);
+            text-align: center;
+            width: 33.33%;
+            padding: 2rem;
+            margin: 0 auto;
+
+            .card-title {
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 400;
+                margin: 2rem;
+                color: hsl(210, 10%, 33%);
+                @media screen and (max-width: 375px) {
+                    &{
+                        font-size: 1.5rem;
+                        text-align: center;
+                        margin: 1rem;
+                    }
+                 }
+            }
+            .card-text {
+                text-align: center;
+                line-height: 3rem;
+                font-size: 1.5rem;
+                font-weight: 400;
+                width: 45%;
+                color: hsl(201, 11%, 66%);
+                @media screen and (max-width: 375px) {
+                    &{
+                        @include text(20rem);
+                        
+                    }
+            }
+        }
+    }
+        &-logos {
+            margin: 5rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 2rem;
+            padding: 2rem;
+
+            @media screen and (max-width: 375px) {
+                &{
+                    margin: 3rem 0;
+                    @include flexBox(column);
+                }
+            }
+        
+            img {
+                width: 12rem;
+                margin: auto 2rem;
+                @media screen and (max-width: 375px) {
+                    &{
+                        margin: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
